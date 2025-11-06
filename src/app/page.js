@@ -1,66 +1,31 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client"
+
+import { motion } from "framer-motion"
+
+import TechStack from "@/components/TechStack"
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+    <div className="flex flex-col items-center justify-center min-h-[70vh] text-center p-4">
+      <motion.div
+        initial={{ opacity: 0, y: 20}}
+        animate={{ opacity: 1, y: 0}}
+        transition={{ duration: 0.8 }}
+      >
+        <h1 className="text-5xl md:text-7xl font-bold md-4">
+          Hi, I&apos;m <span className="text-blue-400">Minh Dang</span>
+        </h1>
+
+        <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl">
+          A Sophomore in Information Technology specializing in building modern applications.
+        </p>
+
+        <a href="/projects" className="px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 transition-colors duration-300">
+          View My Work
+        </a>
+      </motion.div>
+
+      <TechStack />
     </div>
-  );
+  )
 }
