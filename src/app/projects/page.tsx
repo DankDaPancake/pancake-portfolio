@@ -3,20 +3,20 @@ import ProjectCard from '../../components/ProjectCard'; // Import our new compon
 const projects = [
   {
     title: "My Portfolio Website",
-    description: "",
-    githubLink: "#",
+    description: "This is a Next.js portfolio project bootstrapped with create-next-app",
+    githubLink: "https://github.com/DankDaPancake/pancake-portfolio",
     demoLink: "#",
   },
   { 
     title: "GoTogether",
-    description: "",
+    description: "#",
     githubLink: "#",
     demoLink: "#",
   },
   {
     title: "WordLadder",
-    description: "",
-    githubLink: "#",
+    description: "A spooky Halloween-themed Word Ladder puzzle game built with Python and Pygame!",
+    githubLink: "https://github.com/DankDaPancake/WordLadder",
     demoLink: "#",
   },
   {

@@ -1,6 +1,6 @@
 import "./globals.css";
 
-import Header from "../components/Header";  
+import Navbar  from "~/components/Navbar";
 import Footer from "../components/Footer"
 
 export const metadata = {
@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className = "bg-gray-900 text-white flex flex-col min-h-screen">
-        <Header />{}
+        <Navbar />{}
 
         <main className = "max-w-4xl mx-auto p-4 flex-grow">
           {children}

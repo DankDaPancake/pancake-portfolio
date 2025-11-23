@@ -20,7 +20,7 @@ export default function AboutPage() {
           transition={{ delay: 0.2, duration: 0.5 }}
         >
 					<Image
-						src=""
+						src="/placeholder.png"
 						alt="My profile picture"
 						width={256}
 						height={256}
