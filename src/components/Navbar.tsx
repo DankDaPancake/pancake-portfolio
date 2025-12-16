@@ -17,6 +17,8 @@ const navItems = [
   { name: "Tech Stack", href: "#tech" },
   { name: "Projects", href: "#projects" },
   { name: "About", href: "#about" },
+  { name: "Resume", href: "#resume" },
+  { name: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
@@ -66,13 +68,13 @@ export default function Navbar() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out border-b",
         isScrolled 
-          ? "bg-slate-950/80 backdrop-blur-md border-slate-800 py-4" 
+          ? "bg-[hsl(222,47%,5%)]/90 backdrop-blur-md border-sky-500/10 py-4" 
           : "bg-transparent border-transparent py-6"
       )}
     >
-      <div className="max-w-5xl mx-auto px-4 flex justify-between items-center">
-        <div className="font-bold text-xl tracking-tighter text-slate-100 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-          My<span className="text-blue-500">Portfolio</span>
+      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+        <div className="font-bold text-xl tracking-tighter text-white cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+          My<span className="text-sky-400">Portfolio</span>
         </div>
 
         {/* Desktop Navigation */}
@@ -83,9 +85,9 @@ export default function Navbar() {
               href={item.href}
               onClick={(e) => scrollToSection(e, item.href)}
               className={cn(
-                "px-4 py-2 text-sm font-medium transition-colors rounded-md hover:text-blue-400",
+                "px-4 py-2 text-sm font-medium transition-colors rounded-md hover:text-sky-400",
                 activeSection === item.href.substring(1)
-                  ? "text-blue-400 bg-blue-400/10"
+                  ? "text-sky-400 bg-sky-400/10"
                   : "text-slate-400"
               )}
             >
@@ -98,12 +100,12 @@ export default function Navbar() {
         <div className="md:hidden">
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="text-slate-100">
+              <Button variant="ghost" size="icon" className="text-white hover:text-sky-400">
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="bg-slate-950 border-slate-800 text-slate-100">
+            <SheetContent side="right" className="bg-[hsl(222,47%,5%)] border-sky-500/10 text-white">
               {/* Hidden Title/Desc for Screen Readers/Accessibility */}
               <SheetTitle className="hidden">Mobile Navigation Menu</SheetTitle>
               <SheetDescription className="hidden">
@@ -117,9 +119,9 @@ export default function Navbar() {
                     href={item.href}
                     onClick={(e) => scrollToSection(e, item.href)}
                     className={cn(
-                      "text-lg font-medium transition-colors hover:text-blue-400",
+                      "text-lg font-medium transition-colors hover:text-sky-400",
                       activeSection === item.href.substring(1)
-                        ? "text-blue-400"
+                        ? "text-sky-400"
                         : "text-slate-400"
                     )}
                   >

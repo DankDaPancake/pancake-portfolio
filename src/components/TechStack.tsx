@@ -38,11 +38,11 @@ const iconVariant = {
 export default function TechStack() {
   return (
     <div className="flex flex-col items-center">
-      <h3 className="text-2xl font-bold mb-8 text-slate-200">
+      <h3 className="text-2xl md:text-3xl font-bold mb-12 text-white">
         Technologies I Use
       </h3>
       
-      <div className="flex flex-wrap justify-center gap-6 md:gap-8 max-w-3xl">
+      <div className="flex flex-wrap justify-center gap-8 md:gap-10 max-w-5xl">
         {techList.map((tech, index) => (
           <motion.div
             key={tech.name}
@@ -54,11 +54,11 @@ export default function TechStack() {
             transition={{ duration: 0.3, delay: index * 0.05 }}
           >
             {/* Icon Container with hover effect */}
-            <div className="p-4 bg-slate-800 rounded-xl shadow-sm group-hover:shadow-blue-500/20 group-hover:text-blue-400 transition-all duration-300 border border-slate-700">
+            <div className="p-4 bg-[hsl(222,40%,10%)] rounded-xl shadow-sm group-hover:shadow-sky-500/20 group-hover:text-sky-400 transition-all duration-300 border border-sky-500/10 text-slate-300">
               {tech.icon}
             </div>
             {/* Using shadcn Badge for the label */}
-            <Badge variant="secondary" className="bg-slate-800 text-slate-300 group-hover:bg-blue-500/10 group-hover:text-blue-400 transition-colors border-slate-700">
+            <Badge variant="secondary" className="bg-[hsl(222,40%,10%)] text-slate-300 group-hover:bg-sky-500/10 group-hover:text-sky-400 transition-colors border-sky-500/10">
               {tech.name}
             </Badge>
           </motion.div>
